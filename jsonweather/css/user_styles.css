@@ -1,0 +1,14 @@
+/* These styles are for the user's rules */
+
+#franklin #status {
+    display: none;
+}
+
+#greenville #status {
+    display: none;
+}
+
+#springfield #status {
+    display: none;
+}
+

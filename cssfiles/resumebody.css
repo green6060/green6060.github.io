@@ -1,0 +1,379 @@
+/* General Styling Selectors*/
+
+.center {
+    display: flex;
+    align-content: flex-start;
+}-
+
+p.font {
+    line-height: 200%;
+    font-size: 110%;
+}
+
+.imgsize {
+    display: block;
+    max-width:300px;
+    max-height:350px;
+    width: auto;
+    height: auto;
+    border: 3px solid #73AD21;
+}
+
+#weathercontainer {
+    line-height: 200%;
+}
+
+.rotate {
+    -webkit-transform: rotate(90deg);
+}
+
+#foot {
+    list-style-type: none;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/*........................................................................................................*/
+
+
+/* Web Header Styling */
+
+#webHead {
+    color: #ffffff;
+    margin: auto;
+    padding-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+
+#navBackImg {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    top: 0;
+}
+
+
+/*........................................................................................................*/
+
+
+/* Styling for a Dropdown Button */
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+/*........................................................................................................*/
+
+/* Styling for the Background */
+
+body {
+    background: url("../images/scuffedstatic_dark.jpg");
+    background-size: auto;
+    background-repeat: repeat;
+}
+
+
+/*........................................................................................................*/
+
+
+/* Navigation Bar Styling*/
+/* Remove margins and padding from the list, and add a black background color */
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/*........................................................................................................*/
+
+/* Float the list items side by side */
+
+ul.topnav li {
+    float: left;
+}
+
+/*........................................................................................................*/
+
+/* Style the Links inside the list items */
+
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/*........................................................................................................*/
+
+/* Change background color of links on hover */
+
+ul.topnav li a:hover {
+    background-color: #111;
+}
+
+/*........................................................................................................*/
+
+
+
+
+/*........................................................................................................*/
+
+
+/* Weather Page Styling Items */
+
+#highTemp {
+    float: right;
+    color: red;
+}
+
+#lowTemp {
+    float: left;
+    color: blue;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 8px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+/*........................................................................................................*/
+
+/* Main */
+@media only screen and (min-width: 600px) {
+    .myresumebox {
+        display: flex;
+
+        line-height: 50%;
+        background-color: beige;
+        padding: 10px;
+    }
+    .responcompatinfo {
+        display: flex;
+        flex-direction: column;
+
+        background-color: beige;
+        padding: 10px;
+    }
+    .mobilefirstinfo {
+        display: flex;
+        flex-direction: column;
+
+        background-color: beige;
+        padding: 10px;
+    }
+    .languageinfo {
+        display: flex;
+        flex-direction: column;
+
+        background-color: beige;
+        padding: 10px;
+    }
+    .wrapresinfo {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .wrapresume {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+}
+
+
+.wrapperout{
+
+}
+
+
+/*..............................................................................................................................................................................................................................................................................................................................................................................................................................................RESPONSIVE..................................................................................................
+CLASS/MEDIA................................................................................................. QUERIES.......................................................................................................................................................................................................................................................................................................................................................................................................................................*/
+
+
+/* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 680px) {
+    /* For desktop: */
+
+    /* Hide the list item that contains the link that should open and close the topnav on small screens
+    ul.topnav li.icon {
+    display: none;
+}
+
+    .col-1 {
+    width: 8.33%;
+}
+    .col-2 {
+    width: 16.66%;
+}
+    .col-3 {
+    width: 25%;
+}
+    .col-4 {
+    width: 33.33%;
+}
+    .col-5 {
+    width: 41.66%;
+}
+    .col-6 {
+    width: 50%;
+}
+    .col-7 {
+    width: 58.33%;
+}
+    .col-8 {
+    width: 66.66%;
+}
+    .col-9 {
+    width: 75%;
+}
+    .col-10 {
+    width: 83.33%;
+}
+    .col-11 {
+    width: 91.66%;
+}
+    .col-12 {
+    width: 100%;
+}
+}
+
+    */
+
+    /* The "responsive" class is added to the topnav with JavaScript WHEN THE USER CLICKS ON THE ICON. This class makes the topnav look good on small screens */
+
+    @media screen and (max-width:680px) {
+        ul.topnav.responsive {
+            position: relative;
+        }
+        ul.topnav.responsive li.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        ul.topnav.responsive li {
+            float: none;
+            display: inline;
+        }
+        ul.topnav.responsive li a {
+            display: block;
+            text-align: left;
+        }
+
+
+        /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+
+        ul.topnav li:not(: first-child) {
+            display: none;
+        }
+        ul.topnav li.icon {
+            float: right;
+            display: inline-block;
+        }
+    }
