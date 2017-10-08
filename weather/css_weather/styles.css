@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Sansita', sans-serif;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    color: #FFF
+}
+
+a {
+    color: #FFF;
+}
+
+header {
+
+}
+
+nav {
+    background-color: #0e89d5;
+    border: 1px solid #555;
+}
+
+main {
+
+}
+
+footer {
+    background-color: #0e89d5;
+    border: 1px solid #555;
+}
