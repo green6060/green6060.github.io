@@ -11,16 +11,18 @@ body {
 
 ul {
     list-style-type: none;
+    text-align: justify;
     margin: 0;
     padding: 0;
 }
 
 li {
     display: inline;
-    color: #FFF
+    color: #FFF;
 }
 
-a {
+li a {
+    text-decoration: none;
     color: #FFF;
 }
 
@@ -34,7 +36,17 @@ nav {
 }
 
 main {
+    text-align: justify;
+    border: 1px solid #555;
+}
 
+main section {
+    border: 1px solid #555;
+    display: inline-block;
+}
+
+#degrees{
+    border: 1px solid #555;
 }
 
 footer {
