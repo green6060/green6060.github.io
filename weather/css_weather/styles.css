@@ -4,6 +4,11 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Sansita', sans-serif;
 }
 
+h1 {
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Helvetica', sans-serif;
 }
@@ -33,20 +38,21 @@ header {
 nav {
     background-color: #0e89d5;
     border: 1px solid #555;
+    width: 100%;
+}
+
+main section{
+    border: 1px solid #555;
+}
+
+#sections{
+    display: inline;
 }
 
 main {
-    text-align: justify;
-    border: 1px solid #555;
-}
-
-main section {
+    width: 100%;
     border: 1px solid #555;
     display: inline-block;
-}
-
-#degrees{
-    border: 1px solid #555;
 }
 
 footer {
