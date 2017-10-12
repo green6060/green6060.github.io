@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Sansita', sans-serif;
+}
+
+* {
+    box-sizing: border-box; /* changes width property
+    to total width instead of content width */
+}
+
+*:before, *:after{
+    box-sizing: border-box;
+}
+
+.site-name {
+    font-size: 2em;
+    font-weight: 600;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+section p {
+    font-size: 15px;
+}
+
+.paragraphContent {
+    font-size: 17px;
+    line-height: 25px;
+}
+
+#vidAlign {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#logoAlign {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+ol li{
+    padding: 5px;
+}
+
+h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin-top: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.streamlineContent {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.sidebar {
+    width: 200px;
+    background: blue;
+}
+
+#cushion {
+    width: 100%;
+    background: white;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul {
+    list-style: none;
+}
+
+body {
+    margin: 0; /* remove any margin from body */
+    padding: 0; /* ditto for padding */
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Navagation CSS-----------------------------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+ul li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
