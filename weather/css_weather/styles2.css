@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Sansita', sans-serif;
+    font-family: 'Sansita', "second choice", sans-serif;
 }
 
 * {
@@ -13,17 +13,22 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .site-name {
-    font-size: 2em;
     font-weight: 600;
 }
 
-header {
+#page-header {
+    border-style: solid;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    align-items: flex-start;
 }
 
-main {
+#logo {
+   width: 20%;
+    padding-right: 5px;
+}
+
+header {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -40,6 +45,33 @@ nav ul {
     display: flex;
     list-style: none;
     justify-content: space-around;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    border-style: solid;
+}
+
+.overview {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flexAlignTemps {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+}
+
+footer {
+    margin-bottom: 60px;
 }
 
 footer ul {
@@ -63,4 +95,5 @@ body {
     margin: 0; /* remove any margin from body */
     padding: 0; /* ditto for padding */
     font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
 }

@@ -21,6 +21,7 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
 }
 
+
 section p {
     font-size: 15px;
 }
@@ -73,13 +74,15 @@ header {
     background: blue;
 }
 
-#cushion {
+.cushion {
     width: 100%;
     background: white;
 }
 
 .flexContainer {
     display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 main {
