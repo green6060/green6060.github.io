@@ -39,6 +39,19 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
+    background: black;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 nav ul {
@@ -49,8 +62,8 @@ nav ul {
 
 main {
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+
+    align-items: stretch;
     justify-content: space-around;
     border-style: solid;
 }
@@ -60,6 +73,7 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
+    border: 2px solid black;
 }
 
 .flexAlignTemps {
@@ -67,6 +81,14 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
+
+}
+
+.cur_conditions{
+    border: 2px solid black;
+}
+
+.hourly{
     border: 2px solid black;
 }
 
@@ -77,6 +99,7 @@ footer {
 footer ul {
     list-style: none;
 }
+
 /*article,
 aside,
 footer,
