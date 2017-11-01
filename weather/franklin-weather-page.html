@@ -12,56 +12,47 @@
     <body>
         <div>
             <header id="page-header">
-                <span class="site-name"><h1><img id="logo" src="images_weather/logo.jpeg" alt="logo">Weather Site</h1></span>
+                <h1 class="site-name"><img id="logo" src="images_weather/logo.jpeg" alt="logo">Weather Site</h1>
             </header>
 
             <nav>
-                <!-- Links to navigate within our site-->
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">CIT 230 Homework</a>
-                        <div class="dropdown-content">
-                            <a href="design-analysis.html">Design Analysis Assignment</a>
-                            <a href="weather/weather-design-plan.html">Weather Plan page</a>
-                            <a href="weather/franklin-weather-page.html">Franklin Weather Page</a>
-                        </div>
-                    </li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul class="topnav">
+                    <li><a href="" title="Go to home page">Home</a></li>
+                    <li><a class="active" href="#" title="Go to Franklin Home Page">Franklin</a></li>
+                    <li><a href="" title="Go to Greenville home page">Greenville</a></li>
+                    <li><a href="" title="Go to Springfield page">Springfield</a></li>
+                    <li><a href="" title="Search">Search</a></li>
                 </ul>
             </nav>
 
             <main>
+                    <h2>Franklin, ID</h2>
+                    <div>
+                        <section class="overview">
+                            <div class="flexAlignTemps">
+                                <h2>16 F</h2>
+                                <h2>17 F / -3 F</h2>
+                            </div>
+                        </section>
 
-                    <section class="overview">
-                        <h2>Franklin, ID</h2>
-                        <div class="flexAlignTemps">
-                            <h2>16 F</h2>
-                            <h2>17 F / -3 F</h2>
-                            <img src="images_weather/sun.jpg" alt="Sun">
-                        </div>
-                    </section>
+                        <section class="cur_conditions">
+                            <h3><b>Current Conditions</b></h3>
+                            <h3><b>Wind:</b> Southwest @ 1 - 5 MPH</h3>
+                            <h3><b>Precipitation:</b> 0%</h3>
+                        </section>
 
-                    <section class="cur_conditions">
-                        <h3><b>Current Conditions</b></h3>
-                        <h3><b>Wind:</b> Southwest @ 1 - 5 MPH</h3>
-                        <h3><b>Precipitation:</b> 0%</h3>
-                    </section>
-
-                    <section class="hourly">
-                        <h2>Hourly Forecast:</h2>
-                        <h3>8:00 AM: 74</h3>
-                        <h3>9:00 AM: 77</h3>
-                        <h3>10:00 AM: 79</h3>
-                    </section>
-
+                        <section class="hourly">
+                            <h2>Hourly Forecast:</h2>
+                            <h3>8:00 AM: 74</h3>
+                            <h3>9:00 AM: 77</h3>
+                            <h3>10:00 AM: 79</h3>
+                        </section>
+                    </div>
             </main>
 
             <footer>
                 <ul>
                     <li>&copy;2017 Weather Site</li>
-                    <li><a href="green6060.github.io" title="Go to home page">Home</a></li>
-                    <li></li>
                 </ul>
             </footer>
         </div>

@@ -2,8 +2,13 @@
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Sansita', "second choice", sans-serif;
+
 }
 
+main h2 {
+    padding: 0;
+    margin: 0;
+}
 * {
     box-sizing: border-box; /* changes width property
     to total width instead of content width */
@@ -17,10 +22,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #page-header {
-    border-style: solid;
     display: flex;
     flex-flow: column nowrap;
-    align-items: flex-start;
+    justify-content: center;
+    background: #0e89d5;
 }
 
 #logo {
@@ -33,39 +38,39 @@ header {
     flex-flow: column nowrap;
     align-items: center;
 }
+/************************ Nav Stuff********************************/
 
-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: black;
-}
+ul.topnav li.right,
 
-li a {
+ul.topnav li {float: none;}
+
+ul.topnav li a {
     display: block;
-    color: #fff;
-    padding: 8px 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
-li a.active {
-    background-color: #4CAF50;
-    color: white;
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-}
+/********************************************************************/
+
 
 main {
+    background-image: url("/weather/images_weather/raindrops.jpg");
+    background-size: cover;
+}
+main div {
     display: flex;
-
     align-items: stretch;
     justify-content: space-around;
-    border-style: solid;
 }
 
 .overview {
@@ -74,6 +79,8 @@ main {
     align-items: center;
     justify-content: space-around;
     border: 2px solid black;
+    flex-basis: 20%;
+    margin: 20px;
 }
 
 .flexAlignTemps {
@@ -86,14 +93,17 @@ main {
 
 .cur_conditions{
     border: 2px solid black;
+    margin: 20px;
+    flex-basis: 20%;
 }
 
 .hourly{
-    border: 2px solid black;
+    display: none;
+
 }
 
 footer {
-    margin-bottom: 60px;
+    background: #0e89d5;
 }
 
 footer ul {
@@ -119,4 +129,38 @@ body {
     padding: 0; /* ditto for padding */
     font-family: 'Helvetica', sans-serif;
     font-size: 20px;
+}
+/* For Screens larger than phone width */
+
+@media screen and (min-width: 480px) {
+
+    /*Displays "Hourly" content box*/
+    .hourly {
+        display: inline;
+        border: 2px solid black;
+        margin: 20px;
+        flex-basis: 20%;
+    }
+
+    /*Changes nav from vertical flow to horizontal flow*/
+
+    ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    ul.topnav li {float: left;}
+
+    ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    ul.topnav li.right {float: right;}
 }
