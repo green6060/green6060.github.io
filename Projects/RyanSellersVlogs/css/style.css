@@ -104,6 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 30px 0 10px 0;
+    font-size: 4em;
   font-weight: 700;
   line-height: 48px;
   text-transform: uppercase;
@@ -119,6 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h2 {
   color: #999;
+    margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -451,7 +453,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Sections Common
 --------------------------------*/
 .section-title {
-  font-size: 32px;
+  font-size: 42px;
   color: #111;
   text-transform: uppercase;
   text-align: center;
@@ -480,8 +482,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container {
     background: url(../img/about-img350x350.jpg) left top no-repeat;
-    height: 400 px;
-    width: 270 px;
 }
 
 #about .about-content {
@@ -491,11 +491,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about .about-title {
   color: #333;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 36px;
 }
 
 #about .about-text {
   line-height: 26px;
+    font-size: 24px;
 }
 
 #about .about-text:last-child {
