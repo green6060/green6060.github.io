@@ -208,9 +208,14 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 50px;
 }
 
+.is-sticky #header {
+    background: #fff;
+}
+
 @media (max-width: 768px) {
   #header {
     height: 80px;
+      background: #000;
   }
   #header #logo h1 {
     font-size: 26px;
@@ -218,10 +223,9 @@ h1, h2, h3, h4, h5, h6 {
   #header #logo img {
     max-height: 40px;
   }
-}
-
-.is-sticky #header {
-  background: #fff;
+    .is-sticky #header {
+        background: #000;
+    }
 }
 
 /*--------------------------------------------------------------
