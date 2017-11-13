@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #111;
+  background: #fff;
   padding: 20px 0;
   height: 90px;
 }
@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 6px 0;
   line-height: 1;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
+  font-weight: 1000;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .is-sticky #header {
-  background: rgba(0, 0, 0, 0.85);
+  background: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -300,9 +300,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 15px;
   text-decoration: none;
   display: inline-block;
-  color: #fff;
+  color: #000;
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 14px;
   outline: none;
 }
@@ -330,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li a {
-  color: #333;
+  color: #fff;
 }
 
 .nav-menu ul ul {
