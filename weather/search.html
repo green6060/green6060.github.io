@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+        <title id="title">Search</title>
+        <meta name="description" content="Short Description of the page.">
+        <meta name="viewport" content="width=device-width">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css_weather/styles2.css">
+    </head>
+
+<!--**********************************************
+* Who Did You Collaborate With On This Activity?
+* 1. Dallas Parker
+* 2.
+* 3.
+* 4.
+* 5.
+* ************************************************-->
+    <body>
+
+        <header id="page-header"><h1 class="site-name"><img id="logo" src="images_weather/logo.jpeg" alt="logo">Weather Site</h1></header>
+
+        <nav>
+            <ul class="topnav">
+                <li><a href="../index.html" alt = "Home Page Link" title="Go to home page">Home Page</a></li>
+                <li><a href="franklin-weather-page.html" alt = "Franklin Weather Page Link">Franklin Weather Page</a></li>
+                <li><a href="greenville-weather-page.html" alt = "Greenville Weather Page Link">Greenville</a></li>
+                <li><a href="" alt = "Springfield Weather Page Link">Springfield</a></li>
+                <li><a class="active" href="#" alt = "Search Bar Link">Search</a></li>
+            </ul>
+        </nav>
+
+        <main id="page-main">
+            <div id="search_bar">
+                <form method="get" action="//autocomplete.wunderground.com/aq" id="srchfrm">
+                    <input type="search" name="query" id="query">
+                    <input type="submit" name="submit" value="Search" id="send">
+                </form>
+
+                <section id="searchResults">
+                    <h2>Search Results</h2>
+                </section>
+
+                <h2 id="where"></h2>
+            </div>
+
+            <div>
+                <div id="content_wrapper">
+                    <section class="overview">
+                        <h2>Current Temp F</h2>
+                        <h2 id="currentTemp"></h2>
+                        <h2><title>Today's High's and Low's</title></h2>
+                        <h2 id="temp"></h2>
+                    </section>
+
+                    <section class="cur_conditions">
+                        <h3>Current Conditions</h3>
+                        <h3 id="wind"></h3>
+                        <h3 id="precipitation"></h3>
+                    </section>
+
+                    <section class="hourly">
+                        <h2>Hourly Forecast:</h2>
+                    </section>
+                </div>
+            </div>
+
+            </main>
+        <footer>
+            <ul>
+                <li>&copy;2017 Weather Site</li>
+            </ul>
+        </footer>
+        <!--<script src="scripts-weather/modules.js"></script>-->
+        <script src="scripts-weather/search.js"></script>
+    </body>
+
+</html>
+

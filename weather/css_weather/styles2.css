@@ -84,6 +84,9 @@ main div {
 
 
 .cur_conditions{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     border: 2px solid black;
     margin: 20px;
     flex-basis: 20%;
@@ -132,8 +135,20 @@ body {
         border: 2px solid black;
         margin: 20px;
         flex-basis: 20%;
+        overflow: hidden;
     }
 
+    #content_wrapper{
+        height: 350px;
+    }
+
+    #search_bar{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        border: 2px solid black;
+        margin: 20px;
+    }
     /*Changes nav from vertical flow to horizontal flow*/
 
     ul.topnav {
