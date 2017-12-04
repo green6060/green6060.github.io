@@ -1,29 +1,139 @@
+<!--
+
+<main>
+<h2>Franklin, ID</h2>
+<div id="content_wrapper">
+<section class="overview">
+<h2>Current Temp F</h2>
+<h2><title>Today's High's and Low's</title></h2>
+<h2>90 F / 66 F</h2>
+</section>
+
+<section class="cur_conditions">
+<h3>Current Conditions</h3>
+<h3>Wind: Southwest @ 1 - 5 MPH</h3>
+<h3><b>Precipitation:</b> 0%</h3>
+</section>
+
+<section class="hourly">
+
+<h2>Hourly Forecast:</h2>
+<h3>12:00 AM: 67</h3>
+<h3>1:00 AM: 67</h3>
+<h3>2:00 AM: 69</h3>
+<h3>3:00 AM: 69</h3>
+<h3>4:00 AM: 69</h3>
+<h3>5:00 AM: 70</h3>
+<hr>
+<h3>6:00 AM: 69</h3>
+<h3>7:00 AM: 72</h3>
+<h3>8:00 AM: 74</h3>
+<h3>9:00 AM: 77</h3>
+<h3>10:00 AM: 79</h3>
+<h3>11:00 AM: 81</h3>
+<h3>12:00 PM: 84</h3>
+<h3>1:00 PM: 86</h3>
+<h3>2:00 PM: 88</h3>
+<h3>3:00 PM: 90</h3>
+<h3>4:00 PM: 90</h3>
+<h3>5:00 PM: 85</h3>
+<h3>6:00 PM: 83</h3>
+<h3>7:00 PM: 79</h3>
+<h3>8:00 PM: 74</h3>
+<h3>9:00 PM: 70</h3>
+<h3>10:00 PM: 68</h3>
+<h3>11:00 PM: 66</h3>
+
+
+</section>
+</div>
+</main>
+
+<footer>
+<ul>
+<li>&copy;2017 Weather Site</li>
+</ul>
+</footer>
+</div>
+</body>
+</html>
+
+-->
+
 <!doctype html>
-<html lang="en">
+<html lang="en-us">
 
     <head>
         <meta charset="UTF-8">
-        <title>Weather Home</title>
+        <title>Franklin, ID | Weather </title>
+        <meta name="description" content="A Weather Page for Checking the Weather. Whether you Want to or Not.">
         <meta name="viewport" content="width=device-width">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <link rel="stylesheet" href="/jsonweather-html/css/weather-style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css_weather/styles2.css">
     </head>
-    <!-- *********************************************
-* Who Did You Collaborate With On This Assessment?
-* 1. Dallas Parker
-* 2.
-* 3.
-* 4.
-* 5.
-* ******************************************** -->
+
     <body>
+        <div>
+            <header id="page-header">
+                <h1 class="site-name"><img id="logo" src="images_weather/logo.jpeg" alt="logo">Weather Site</h1>
+            </header>
 
-        <div id="wrapper">
+            <nav>
+                <ul class="topnav">
+                    <li><a href="../index.html" alt = "Home Page Link" title="Go to home page">Home Page</a></li>
+                    <li><a class="active" href="#" alt = "Franklin Weather Page Link">Franklin Weather Page</a></li>
+                    <li><a href="greenville-weather-page.html" alt = "Greenville Weather Page Link">Greenville</a></li>
+                    <li><a href="" alt = "Springfield Weather Page Link">Springfield</a></li>
+                    <li><a href="search.html" alt = "Search Bar Link">Search</a></li>
+                </ul>
+            </nav>
+<!--            <main>
+                <h2>Franklin, ID</h2>
+                <div id="content_wrapper">
+                    <section class="overview">
+                        <h2>Current Temp F</h2>
+                        <h2><title>Today's High's and Low's</title></h2>
+                        <h2>90 F / 66 F</h2>
+                    </section>
 
-            <header id="page-header"></header>
+                    <section class="cur_conditions">
+                        <h3>Current Conditions</h3>
+                        <h3>Wind: Southwest @ 1 - 5 MPH</h3>
+                        <h3><b>Precipitation:</b> 0%</h3>
+                    </section>
 
-            <nav id="page-nav"></nav>
+                    <section class="hourly">
 
+                        <h2>Hourly Forecast:</h2>
+                        <h3>12:00 AM: 67</h3>
+                        <h3>1:00 AM: 67</h3>
+                        <h3>2:00 AM: 69</h3>
+                        <h3>3:00 AM: 69</h3>
+                        <h3>4:00 AM: 69</h3>
+                        <h3>5:00 AM: 70</h3>
+                        <hr>
+                        <h3>6:00 AM: 69</h3>
+                        <h3>7:00 AM: 72</h3>
+                        <h3>8:00 AM: 74</h3>
+                        <h3>9:00 AM: 77</h3>
+                        <h3>10:00 AM: 79</h3>
+                        <h3>11:00 AM: 81</h3>
+                        <h3>12:00 PM: 84</h3>
+                        <h3>1:00 PM: 86</h3>
+                        <h3>2:00 PM: 88</h3>
+                        <h3>3:00 PM: 90</h3>
+                        <h3>4:00 PM: 90</h3>
+                        <h3>5:00 PM: 85</h3>
+                        <h3>6:00 PM: 83</h3>
+                        <h3>7:00 PM: 79</h3>
+                        <h3>8:00 PM: 74</h3>
+                        <h3>9:00 PM: 70</h3>
+                        <h3>10:00 PM: 68</h3>
+                        <h3>11:00 PM: 66</h3>
+
+
+                    </section>
+                </div>
+            </main>-->
             <main id="page-main">
 
                 <section class="weather-container">
@@ -46,14 +156,13 @@
 
                 </section>
 
+
             </main>
 
-            <footer id="page-footer">
-
-                <div id="footer-content"></div>
-
-                <small>Last updated: </small>
-
+            <footer>
+                <ul>
+                    <li>&copy;2017 Weather Site</li>
+                </ul>
             </footer>
 
             <!--<script src="/jsonweather-html/scripts/jquery-3.0.0.min.js"></script>-->
