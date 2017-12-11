@@ -1,0 +1,160 @@
+/************Mobile-First Default***********/
+
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+* {
+    box-sizing: border-box;
+    /* changes width property
+    to total width instead of content width */
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+    display: block;
+    /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+}
+
+body {
+    /* remove any margin and padding from body */
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    background-image: url(../images/site/small-background.jpg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*  style fonts to headings */
+    font-family: Sansita, 'Geneva', generic-family;
+}
+
+#wrapper {
+    display: flex;
+    background-color: #fff;
+    margin: 1.2em;
+    flex-direction: column;
+}
+
+#title {
+    /*  sizing */
+    font-size: 40px;
+    margin: 6px;
+}
+
+#acmeRocket {
+    /*  Adding & Aligning Image */
+    display: flex;
+    background-image: url(../images/site/small-feature.jpg);
+    background-size: cover;
+    height: 160px;
+}
+
+#acmeRocket #wantitNow {
+    /* Styling for 'Want It Now' Button */
+    list-style: none;
+    color: #990033;
+    font-size: 10px;
+    position: relative;
+    left: 45%;
+}
+
+#acmeRocket #actnbtn {
+    width: 95px;
+}
+
+#acmeRocket h2 {
+    margin: 0px;
+}
+
+/* Navigation */
+nav {
+    /*  Fix Nav permanantly to the bottom */
+    order: 4;
+    bottom: 0;
+    padding-left: 12px;
+    font-size: 14px;
+    background-color: #de2226;
+}
+
+
+nav a:visited {
+    /*Links that HAVE been visited*/
+    color: #fff
+}
+
+nav a:link {
+    /*Links that have NOT been visited*/
+    text-decoration: none;
+    color: #fff
+}
+
+nav ul {
+    /* Nav Bar Styling*/
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav ul li {
+    /* Nav Item Spacing*/
+    padding-right: 2em;
+}
+
+#recipes {
+    /* Styles for Recipe Table */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#header {
+    /* Styles for Header*/
+    background-image: url(../images/site/small-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4em;
+    border-bottom: 4px solid;
+}
+
+/**********************************************************/
+
+@media (min-width: 700px) {
+    nav {
+        /*  Fix Nav permanantly to the Top, during large screen */
+        order: -1;
+    }
+    #header {
+        /*set background */
+        background-image: url(../images/site/large-logo.png);
+        height: 120px;
+        order: -2;
+    }
+    body {
+        background-image: url(../images/site/large-background.jpg);
+    }
+    .acmeRocket {
+        background-image: url(../images/site/large-feature.jpg);
+        height: 800px;
+    }
+    nav ul li {
+        /*  sizing of nav bar*/
+        font-size: 3vw;
+    }
+
+}
