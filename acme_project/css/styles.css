@@ -1,10 +1,11 @@
-/************Mobile-First Default***********/
+/********************************
+* Default SMALL Screen
+********************************/
 
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 * {
     box-sizing: border-box;
-    /* changes width property
-    to total width instead of content width */
+    /* width = total width != content width */
 }
 
 *:before,
@@ -28,7 +29,7 @@ figure {
 }
 
 body {
-    /* remove any margin and padding from body */
+    /* NO margin/padding on body */
     font-family: 'Helvetica', sans-serif;
     margin: 0;
     background-image: url(../images/site/small-background.jpg);
@@ -40,121 +41,443 @@ h3,
 h4,
 h5,
 h6 {
-    /*  style fonts to headings */
+    /*  Stylin up the fonts */
     font-family: Sansita, 'Geneva', generic-family;
 }
 
 #wrapper {
+    /* Styling the page as a whole, inside this wrapper */
     display: flex;
     background-color: #fff;
     margin: 1.2em;
     flex-direction: column;
 }
 
-#title {
-    /*  sizing */
-    font-size: 40px;
-    margin: 6px;
+#pageHeader {
+    /* Adds bacground image, and lines up the header area, with a border*/
+    background-image: url(../images/site/small-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 4em;
+    border-bottom: 3px solid;
 }
 
-#acmeRocket {
-    /*  Adding & Aligning Image */
-    display: flex;
-    background-image: url(../images/site/small-feature.jpg);
-    background-size: cover;
-    height: 160px;
-}
-
-#acmeRocket #wantitNow {
-    /* Styling for 'Want It Now' Button */
-    list-style: none;
-    color: #990033;
-    font-size: 10px;
-    position: relative;
-    left: 45%;
-}
-
-#acmeRocket #actnbtn {
-    width: 95px;
-}
-
-#acmeRocket h2 {
-    margin: 0px;
-}
-
-/* Navigation */
 nav {
-    /*  Fix Nav permanantly to the bottom */
+    /*  Pins nav to the bottom, on small screens */
     order: 4;
-    bottom: 0;
-    padding-left: 12px;
-    font-size: 14px;
     background-color: #de2226;
-}
-
-
-nav a:visited {
-    /*Links that HAVE been visited*/
-    color: #fff
+    font-size: 14px;
+    padding-left: 12px;
 }
 
 nav a:link {
-    /*Links that have NOT been visited*/
+    /*Changes link colors*/
     text-decoration: none;
     color: #fff
 }
 
 nav ul {
-    /* Nav Bar Styling*/
+    /*  Nav bar styles (basic)*/
     display: flex;
     list-style: none;
     padding-left: 0;
 }
 
 nav ul li {
-    /* Nav Item Spacing*/
-    padding-right: 2em;
+    padding-right: 1em;
 }
 
+#pageTitle {
+    font-size: 34px;
+    margin: 5px;
+}
+
+#acmeRocket {
+    /*  Adds home page acme rocet and sizes it*/
+    display: flex;
+    background-image: url(../images/site/feature-small.jpg);
+    background-size: cover;
+    height: 175px;
+}
+
+#acmeRocket #wantitNow {
+    /*  Adds some styling to "I Want It NOW" button*/
+    list-style: none;
+    color: #990033;
+    font-size: 10px;
+    position: relative;
+    left: 40%;
+}
+#acmeRocket #actnbtn {
+    width: 125px;
+}
+#acmeRocket h2 {
+    margin: 0;
+}
+
+/* General Styling for recipes, product review, titles, etc */
+
 #recipes {
-    /* Styles for Recipe Table */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-#header {
-    /* Styles for Header*/
-    background-image: url(../images/site/small-logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 4em;
-    border-bottom: 4px solid;
+#productReview {
+    margin: 8px;
 }
 
-/**********************************************************/
+#recipesTitle {
+    margin: 8px;
+}
 
-@media (min-width: 700px) {
+#recipebox1 {
+    align-self: baseline;
+}
+
+#recipebox2 {
+    align-self: baseline;
+}
+
+#bbqText {
+    margin-right: 20px;
+}
+
+#bbq {
+    background-image: url(../images/recipes/bbqsand.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 125px;
+    width: 125px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#soup {
+    background-image: url(../images/recipes/soup.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 125px;
+    width: 125px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+#pie {
+    background-image: url(../images/recipes/potpie.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 125px;
+    width: 125px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+#taco {
+    background-image: url(../images/recipes/taco.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 125px;
+    width: 125px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/*************************************************
+*Styling for the pages containing ACME Products  *
+*************************************************/
+
+#productTitle {
+    text-align: center;
+}
+
+#image {
+    /*  Styling for IMAGES */
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding-left: 5px;
+    padding-bottom: 25px;
+}
+
+#description {
+    padding: 15px;
+    text-align: left;
+}
+
+#manufacturer {
+    text-align: center;
+}
+
+#reviews {
+    text-align: center;
+}
+
+#price {
+    color: #de2226;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer {
+    border-top: 3px solid;
+    border-top-color: black;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+/******************************************************
+* This media query is an in-between Small and Medium! *
+* 520px viewport                                      *
+*******************************************************/
+
+@media (min-width: 520px) {
+
+
+    #acmeRocket {
+        height: 300px;
+    }
+
+    #acmeRocket #wantitNow {
+        font-size: 20px;
+        position: relative;
+        left: 50%;
+    }
+
+    #acmeRocket #actnbtn {
+        width: 200px;
+    }
+
+    /*************************************************
+    *Styling for the pages containing ACME Products  *
+    *************************************************/
+
+    #productTitle {
+        text-align: left;
+        font-size: 40px;
+        margin: 3px;
+        text-align: center;
+    }
+
+    #image {
+        width: 475px;
+        padding-left: 100px;
+    }
+
+    #description {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #manufacturer {
+        font-size: 30px;
+    }
+
+    #reviews {
+        font-size: 30px;
+    }
+
+    #price {
+        font-size: 30px;
+    }
+}
+
+
+/**************************************
+* Styling for screen sizes larger than*
+* 775px viewport                      *
+***************************************/
+
+@media (min-width: 775px) {
+
+
+    body {
+        background-image: url(../images/site/medium-background.jpg);
+    }
+
+    #pageHeader {
+        /* Adds bacground image, and lines up the header area */
+        order: -2;
+        background-image: url(../images/site/medium-logo.png);
+        height: 125px;
+    }
+
     nav {
-        /*  Fix Nav permanantly to the Top, during large screen */
+        /*  Unpins Nav from bottom in medium screens, and places it on TOP*/
         order: -1;
     }
-    #header {
-        /*set background */
-        background-image: url(../images/site/large-logo.png);
-        height: 120px;
-        order: -2;
-    }
-    body {
-        background-image: url(../images/site/large-background.jpg);
-    }
-    .acmeRocket {
-        background-image: url(../images/site/large-feature.jpg);
-        height: 800px;
-    }
+
     nav ul li {
-        /*  sizing of nav bar*/
+        /*  Nav Bar Sizing*/
         font-size: 3vw;
     }
 
+    main h1 {
+        /*  Adds margin to top and bottom of main, for styling*/
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #pageTitle {
+        font-size: 60px;
+    }
+
+    #acmeRocket {
+        background-image: url(../images/site/feature-medium.jpg);
+        background-size: cover;
+        height: 410px;
+    }
+
+    #acmeRocket #wantitNow {
+        font-size: 25px;
+        position: relative;
+        left: 57%;
+    }
+
+    #acmerocket #actnbtn {
+        width: 260px;
+    }
+
+    #boxes {
+        display: flex;
+    }
+
+    #productReview {
+        order: 1;
+        font-size: 13px
+    }
+
+    #recipesTitle {
+        margin-top: 30px;
+        font-size: 15px;
+    }
+
+    #bbq {
+        margin: 0;
+        margin-left: 25px;
+    }
+
+    #pie {
+        margin-top: 15px;
+        margin-left: 25px;
+    }
+
+    #soup {
+        margin: 0;
+        margin-left: 25px;
+    }
+
+    #taco {
+        margin-top: 15px;
+        margin-left: 25px;
+    }
+
+    /*************************************************
+    *Styling for the pages containing ACME Products  *
+    *************************************************/
+    #productTitle {
+        font-size: 60px;
+        text-align: left;
+    }
+
+    #productBoxes {
+        display: flex;
+    }
+
+    #image {
+        width: 450px;
+        padding-right: 60px;
+        padding-left: 25px;
+    }
+
+    #description {
+        font-size: 35px;
+    }
+
+    #manufacturer {
+        font-size: 30px;
+    }
+
+    #reviews {
+        font-size: 30px;
+    }
+
+    #price {
+        font-size: 45px;
+    }
+
+    footer {
+        font-size: 25px;
+    }
+}
+
+/********************************
+* Large Screen Styles
+* 1225px viewport
+********************************/
+
+@media (min-width: 1225px) {
+    body {
+        background-image: url(../images/site/large-background.jpg);
+    }
+
+    #pageHeader {
+        /* Adds bacground image*/
+        background-image: url(../images/site/large-logo.png);
+    }
+
+    nav ul li {
+        font-size: 2vw;
+    }
+
+    #pageTitle {
+        font-size: 80px;
+    }
+
+    #acmeRocket {
+        background-image: url(../images/site/feature-large.jpg);
+        height: 540px;
+    }
+
+    #acmeRocket #wantitNow {
+        font-size: 30px;
+        position: relative;
+        left: 62%;
+    }
+
+    #acmeRocket #actnbtn {
+        width: 350px;
+    }
+
+    #productReview {
+        font-size: 24px;
+    }
+
+    #recipesTitle {
+        margin-top: 30px;
+        font-size: 24px;
+    }
+
+    /*************************************************
+    *Styling for the pages containing ACME Products  *
+    *************************************************/
+    #image {
+        width: 40em;
+        padding-left: 10px;
+    }
+
+    #manufacturer {
+        font-size: 30px;
+    }
+
+    #reviews {
+        font-size: 30px;
+    }
+
+    #price {
+        font-size: 60px;
+    }
 }

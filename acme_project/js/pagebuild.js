@@ -1,17 +1,17 @@
 // Intercept the menu link clicks
 
 //Anvil Page
-$("#page-nav").on("click", "#anvils", function (evt) {
+$("#pageNav").on("click", "#anvils", function (evt) {
     evt.preventDefault();
 
-    $.getJSON("/acme/js/acme.json", function (JSON) {
+    $.getJSON("js/acme.json", function (JSON) {
         var items = [];
         $.each(JSON, function (key, val) {
 
-            if (val.list == 1) {
-                $("#page_title").text(val.name);
-                $("#home-content").text('');
-                $("#product-title").text(val.name);
+            if (val.anvilsLink == 1) {
+                $("#pageTitle").text(val.name);
+                $("#homeContent").text('');
+                $("#productTitle").text(val.name);
                 $("#image").html("<img src='" + val.path + "' alt='anvil'>");
                 $("#description").text(val.description);
                 $("#manufacturer").html("<b> Made by: </b>" + val.manufacturer);
@@ -27,17 +27,17 @@ $("#page-nav").on("click", "#anvils", function (evt) {
 
 
 //Explosives Page
-$("#page-nav").on("click", "#explosives", function (evt) {
+$("#pageNav").on("click", "#explosives", function (evt) {
     evt.preventDefault();
 
-    $.getJSON("/acme/js/acme.json", function (JSON) {
+    $.getJSON("js/acme.json", function (JSON) {
         var items = [];
         $.each(JSON, function (key, val) {
 
-            if (val.list == 2) {
-                $("#title").text(val.name);
-                $("#home-page-content").text('');
-                $("#product-title").text(val.name);
+            if (val.anvilsLink == 2) {
+                $("#pageTitle").text(val.name);
+                $("#homeContent").text('');
+                $("#productTitle").text(val.name);
                 $("#image").html("<img src='" + val.path + "' alt='explosives'>");
                 $("#description").text(val.description);
                 $("#manufacturer").html("<b> Made by: </b>" + val.manufacturer);
@@ -53,17 +53,17 @@ $("#page-nav").on("click", "#explosives", function (evt) {
 });
 
 //Decoys Page
-$("#page-nav").on("click", "#decoys", function (evt) {
+$("#pageNav").on("click", "#decoys", function (evt) {
     evt.preventDefault();
 
-    $.getJSON("/acme/js/acme.json", function (JSON) {
+    $.getJSON("js/acme.json", function (JSON) {
         var items = [];
         $.each(JSON, function (key, val) {
 
-            if (val.list == 3) {
-                $("#page_title").text(val.name);
-                $("#home-content").text('');
-                $("#product-title").text(val.name);
+            if (val.anvilsLink == 3) {
+                $("#pageTitle").text(val.name);
+                $("#homeContent").text('');
+                $("#productTitle").text(val.name);
                 $("#image").html("<img src='" + val.path + "' alt='decoys'>");
                 $("#description").text(val.description);
                 $("#manufacturer").html("<b> Made by: </b>" + val.manufacturer);
@@ -79,17 +79,17 @@ $("#page-nav").on("click", "#decoys", function (evt) {
 });
 
 //Traps Page
-$("#page-nav").on("click", "#traps", function (evt) {
+$("#pageNav").on("click", "#traps", function (evt) {
     evt.preventDefault();
 
-    $.getJSON("/acme/js/acme.json", function (JSON) {
+    $.getJSON("js/acme.json", function (JSON) {
         var items = [];
         $.each(JSON, function (key, val) {
 
-            if (val.list == 4) {
-                $("#page_title").text(val.name);
-                $("#home-content").text('');
-                $("#product-title").text(val.name);
+            if (val.anvilsLink == 4) {
+                $("#pageTitle").text(val.name);
+                $("#homeContent").text('');
+                $("#productTitle").text(val.name);
 
                 $("#image").html('<img src="' + val.path + '" alt="traps">');
                 $("#description").text(val.description);
