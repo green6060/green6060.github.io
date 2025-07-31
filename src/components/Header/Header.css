@@ -1,0 +1,29 @@
+/* Header Styles */
+header {
+  margin-bottom: var(--space-xl);
+  padding: var(--space-xl) var(--space-md);
+  width: 100%;
+}
+
+/* Typography using CSS custom properties */
+h1 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  font-weight: 700;
+  /* Ensure text is readable on mobile */
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 575px) {
+  header {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-lg) var(--space-sm);
+  }
+  
+  h1 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+  }
+} 

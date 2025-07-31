@@ -1,219 +1,6 @@
-.App {
-  /* Mobile-first: full width with padding */
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Navbar Styles - Mobile First */
-.navbar {
-  width: 100%;
-  background-color: var(--color-background);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: var(--space-sm) 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.navbar-logo {
-  flex-shrink: 0;
-  margin-right: auto; /* Push logo to the left */
-}
-
-.logo-placeholder {
-  font-size: var(--font-size-lg);
-  font-weight: 700;
-  color: var(--color-primary);
-  padding: var(--space-xs) var(--space-sm);
-  border: 2px solid var(--color-primary);
-  border-radius: var(--radius-sm);
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0;
-}
-
-.navbar-nav {
-  display: none; /* Hidden on mobile by default */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  width: 100%;
-  gap: var(--space-sm);
-}
-
-.nav-link {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-size: var(--font-size-base);
-  font-weight: 500;
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
-  display: block;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-link:hover {
-  background-color: var(--color-surface);
-  color: var(--color-primary);
-}
-
-.nav-link:active {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Hamburger menu button */
-.navbar-toggle {
-  display: block;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: var(--space-sm);
-  min-height: 44px;
-  min-width: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1001;
-}
-
-/* Hamburger icon */
-.hamburger {
-  width: 24px;
-  height: 18px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hamburger-line {
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-primary);
-  border-radius: 1px;
-  transition: all var(--transition-fast);
-}
-
-/* Simple hamburger animation - just hide middle line and adjust spacing */
-.hamburger.open {
-  justify-content: center;
-}
-
-.hamburger.open .hamburger-line:nth-child(1) {
-  margin-bottom: -2px;
-}
-
-.hamburger.open .hamburger-line:nth-child(2) {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.hamburger.open .hamburger-line:nth-child(3) {
-  margin-top: -2px;
-}
-
-/* Mobile menu open state */
-.navbar-nav.open {
-  display: flex;
-  margin-top: var(--space-sm);
-  padding-top: var(--space-sm);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--color-background);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive container - scales up for larger screens */
-@media (min-width: 576px) {
-  .navbar-container {
-    padding: var(--space-md) 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .navbar-container {
-    padding: var(--space-md) 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-container {
-    max-width: 100%;
-    padding: var(--space-md) 0;
-  }
-}
-
-@media (min-width: 1300px) {
-  .navbar-container {
-    max-width: 1250px;
-    padding: var(--space-md) 0;
-  }
-  
-  /* Show navigation on large desktop and up */
-  .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    gap: var(--space-md);
-    position: static;
-    background: none;
-    box-shadow: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-toggle {
-    display: none;
-  }
-  
-  .nav-link {
-    padding: var(--space-md) var(--space-lg);
-    white-space: nowrap;
-  }
-  
-  /* Apply max-width to lists only on desktop */
-  ul {
-    max-width: 400px;
-  }
-}
+/* App.css - Global styles and utilities */
 
 /* Semantic HTML elements */
-header {
-  margin-bottom: var(--space-xl);
-  padding: var(--space-xl) var(--space-md);
-  width: 100%;
-}
-
 main {
   width: 100%;
   max-width: 100%;
@@ -228,15 +15,6 @@ section {
 }
 
 /* Typography using CSS custom properties */
-h1 {
-  color: var(--color-primary);
-  margin-bottom: var(--space-lg);
-  font-weight: 700;
-  /* Ensure text is readable on mobile */
-  word-wrap: break-word;
-  hyphens: auto;
-}
-
 h2 {
   color: var(--color-primary);
   margin-bottom: var(--space-md);
@@ -312,23 +90,9 @@ li {
 
 /* Mobile-specific improvements */
 @media (max-width: 575px) {
-  .App {
-    padding: 0;
-  }
-  
-  header {
-    margin-bottom: var(--space-lg);
-    padding: var(--space-lg) var(--space-sm);
-  }
-  
   section {
     padding: var(--space-md);
     margin-bottom: var(--space-lg);
-  }
-  
-  h1 {
-    font-size: var(--font-size-2xl);
-    margin-bottom: var(--space-md);
   }
   
   h2 {
@@ -356,5 +120,14 @@ li {
     padding: var(--space-xl);
   }
   
+  ul {
+    max-width: 500px;
+  }
+}
 
+/* Desktop list constraints */
+@media (min-width: 1300px) {
+  ul {
+    max-width: 400px;
+  }
 }
