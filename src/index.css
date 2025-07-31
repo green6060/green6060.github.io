@@ -45,6 +45,9 @@ html {
   /* Prevent font scaling in landscape while allowing user zoom */
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -56,8 +59,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* Improve touch targets */
   -webkit-tap-highlight-color: transparent;
-  /* Prevent horizontal scroll on mobile */
+  /* Prevent horizontal scroll */
   overflow-x: hidden;
+  width: 100%;
 }
 
 /* Improve touch targets for interactive elements */
@@ -91,6 +95,7 @@ p {
 #root {
   min-height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* Responsive breakpoints - Mobile first approach */
