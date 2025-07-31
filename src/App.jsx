@@ -1,10 +1,10 @@
-import { Layout, Navbar, Header } from "./components";
+import { Layout, Navbar, Hero } from "./components";
 
 function App() {
   return (
     <Layout>
       <Navbar />
-      <Header />
+      <Hero />
     </Layout>
   );
 }
