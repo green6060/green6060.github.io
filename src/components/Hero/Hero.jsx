@@ -4,7 +4,12 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Seventh Heaven Tattoo</h1>
+        <img
+          src="/images/styled_header.webp"
+          alt="Seventh Heaven Tattoo Header"
+          className="hero-image"
+        />
+        <button className="booking-button">DM for Booking</button>
       </div>
     </section>
   );
