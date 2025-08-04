@@ -5,7 +5,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <img
-          src="/images/styled_header.webp"
+          src="/images/styled_header.jpeg"
           alt="Seventh Heaven Tattoo Header"
           className="hero-image"
         />

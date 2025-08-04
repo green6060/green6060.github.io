@@ -21,8 +21,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
   height: 100%;
+  width: 100%;
 }
 
 .booking-button {
@@ -103,7 +106,6 @@
   }
   
   .hero-content {
-    justify-content: flex-start;
     padding: 0;
     margin: 0;
   }
