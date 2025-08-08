@@ -12,7 +12,11 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <div className="logo-placeholder">Logo</div>
+          <img
+            src="/images/styled_artist_name_transparent_bkg.png"
+            alt="Seventh Heaven Tattoo"
+            className="navbar-logo-image"
+          />
         </div>
 
         {/* Hamburger menu button for mobile */}
