@@ -13,7 +13,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <img
-            src="/images/styled_artist_name_transparent_bkg.png"
+            src="/images/styled_header_transparent_bkg.png"
             alt="Seventh Heaven Tattoo"
             className="navbar-logo-image"
           />

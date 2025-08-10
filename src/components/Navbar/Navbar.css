@@ -2,7 +2,7 @@
 .navbar {
   width: 100%;
   background-color: #1a1a1a;
-  border: 4px solid #b9968a;
+  border: 4px solid #654e47;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -33,7 +33,6 @@
   width: auto;
   object-fit: contain;
   max-width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   padding: 4px;
   backdrop-filter: blur(10px);
@@ -43,6 +42,7 @@
 .navbar-logo-image:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
+  background-color: #333333;
 }
 
 .navbar-nav {
