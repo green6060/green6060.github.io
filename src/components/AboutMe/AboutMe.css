@@ -3,6 +3,7 @@
   background-color: #1a1a1a;
   padding: 80px 20px;
   min-width: 100%;
+  scroll-margin-top: 100px;
 }
 
 .about-content {

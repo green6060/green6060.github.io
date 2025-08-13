@@ -79,6 +79,20 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Smooth scrolling enhancement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scroll animation for better performance */
+.nav-link[href^="#"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link[href^="#"]:active {
+  transform: scale(0.95);
+}
+
 /* Hamburger menu button */
 .navbar-toggle {
   display: block;

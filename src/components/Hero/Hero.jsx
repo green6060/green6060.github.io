@@ -10,7 +10,14 @@ function Hero() {
             alt="Seventh Heaven Tattoo"
             className="artist-logo"
           />
-          <button className="booking-button">DM for Booking</button>
+          <a
+            href="https://www.instagram.com/7th_heaven_tattoo?igsh=MXBuYXE2b2dzcDRmMQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="booking-button"
+          >
+            DM for Booking
+          </a>
         </div>
       </div>
     </section>

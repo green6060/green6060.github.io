@@ -34,17 +34,56 @@ function Navbar() {
 
         <ul className={`navbar-nav ${isMenuOpen ? "open" : ""}`}>
           <li>
-            <a href="#" className="nav-link">
+            <a
+              href="https://www.instagram.com/7th_heaven_tattoo?igsh=MXBuYXE2b2dzcDRmMQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link"
+            >
               DM for Booking
             </a>
           </li>
           <li>
-            <a href="#" className="nav-link">
+            <a
+              href="#artist-portfolio"
+              className="nav-link"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById("artist-portfolio");
+                if (element) {
+                  const navbarHeight =
+                    document.querySelector(".navbar").offsetHeight;
+                  const elementPosition = element.offsetTop - navbarHeight - 20;
+                  window.scrollTo({
+                    top: elementPosition,
+                    behavior: "smooth",
+                  });
+                }
+                setIsMenuOpen(false);
+              }}
+            >
               Artist Portfolio
             </a>
           </li>
           <li>
-            <a href="#" className="nav-link">
+            <a
+              href="#reviews"
+              className="nav-link"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById("reviews");
+                if (element) {
+                  const navbarHeight =
+                    document.querySelector(".navbar").offsetHeight;
+                  const elementPosition = element.offsetTop - navbarHeight - 20;
+                  window.scrollTo({
+                    top: elementPosition,
+                    behavior: "smooth",
+                  });
+                }
+                setIsMenuOpen(false);
+              }}
+            >
               Reviews
             </a>
           </li>

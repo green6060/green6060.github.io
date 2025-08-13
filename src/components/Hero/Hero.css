@@ -53,8 +53,10 @@
 }
 
 .booking-button {
-  background: transparent;
-  border: 3px solid #8B7355;
+  background: linear-gradient(135deg, #8B7355, #654321, #3E2723);
+  background-size: 200% 200%;
+  animation: earthy-gradient-shift 4s ease-in-out infinite;
+  border: 3px solid transparent;
   color: #ffffff;
   padding: 12px 24px;
   font-size: 1.1rem;
@@ -64,17 +66,22 @@
   border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 0 10px rgba(139, 115, 85, 0.3), inset 0 0 10px rgba(139, 115, 85, 0.1);
+  box-shadow: 0 4px 15px rgba(139, 115, 85, 0.4);
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .booking-button:hover {
-  background: rgba(139, 115, 85, 0.1);
-  border-color: #8B7355;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(139, 115, 85, 0.5), inset 0 0 15px rgba(139, 115, 85, 0.2);
+  background: linear-gradient(135deg, #654321, #3E2723, #8B7355);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 115, 85, 0.6);
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes earthy-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .hero-content {
