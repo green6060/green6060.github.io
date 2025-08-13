@@ -6,6 +6,10 @@ const PLACE_ID = import.meta.env.VITE_GOOGLE_PLACE_ID; // Your business's Google
 
 export class GoogleReviewsService {
   constructor() {
+    console.log('Google Reviews Service Initializing...');
+    console.log('API Key exists:', !!GOOGLE_PLACES_API_KEY);
+    console.log('Place ID exists:', !!PLACE_ID);
+    
     if (!GOOGLE_PLACES_API_KEY) {
       console.warn(
         "Google Places API key not found. Please set VITE_GOOGLE_PLACES_API_KEY in your .env file"
@@ -16,6 +20,14 @@ export class GoogleReviewsService {
         "Google Place ID not found. Please set VITE_GOOGLE_PLACE_ID in your .env file"
       );
     }
+    
+    // Check if we have placeholder values
+    if (GOOGLE_PLACES_API_KEY && GOOGLE_PLACES_API_KEY.includes('your_google_places_api_key_here')) {
+      console.warn('API Key contains placeholder text. Please replace with actual key.');
+    }
+    if (PLACE_ID && PLACE_ID.includes('your_google_place_id_here')) {
+      console.warn('Place ID contains placeholder text. Please replace with actual values.');
+    }
   }
 
   async getReviews() {
@@ -23,6 +35,16 @@ export class GoogleReviewsService {
       if (!GOOGLE_PLACES_API_KEY || !PLACE_ID) {
         throw new Error("Missing API key or Place ID");
       }
+
+      // Check for placeholder values
+      if (GOOGLE_PLACES_API_KEY.includes('your_google_places_api_key_here') || 
+          PLACE_ID.includes('your_google_place_id_here')) {
+        throw new Error("Environment variables contain placeholder text. Please update with actual values.");
+      }
+
+      console.log('Making API request to Google Places API...');
+      console.log('Place ID:', PLACE_ID);
+      console.log('API Key (first 10 chars):', GOOGLE_PLACES_API_KEY.substring(0, 10) + '...');
 
       // Get place details including reviews
       const response = await fetch(

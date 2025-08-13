@@ -1,0 +1,18 @@
+# Google Places API Configuration
+# Copy this content to a new file called .env in your project root
+
+# Your Google Cloud Console API Key
+# Get this from: https://console.cloud.google.com/apis/credentials
+VITE_GOOGLE_PLACES_API_KEY=AIzaSyB...your_actual_api_key_here
+
+# Your Google Business Place ID
+# Find this by searching for your business on Google Maps
+# The Place ID will be in the URL or use Google's Place ID Finder
+VITE_GOOGLE_PLACE_ID=ChIJN...your_actual_place_id_here
+
+# Instructions:
+# 1. Create a new file called .env in your project root
+# 2. Copy the above content into it
+# 3. Replace the placeholder values with your actual API key and Place ID
+# 4. Restart your development server
+# 5. Check the browser console for confirmation messages 
