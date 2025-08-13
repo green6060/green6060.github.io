@@ -16,13 +16,20 @@ export class GoogleReviewsService {
         "Google Place ID not found. Please set VITE_GOOGLE_PLACE_ID in your .env file"
       );
     }
-    
+
     // Check if we have placeholder values
-    if (GOOGLE_PLACES_API_KEY && GOOGLE_PLACES_API_KEY.includes('your_google_places_api_key_here')) {
-      console.warn('API Key contains placeholder text. Please replace with actual key.');
+    if (
+      GOOGLE_PLACES_API_KEY &&
+      GOOGLE_PLACES_API_KEY.includes("your_google_places_api_key_here")
+    ) {
+      console.warn(
+        "API Key contains placeholder text. Please replace with actual key."
+      );
     }
-    if (PLACE_ID && PLACE_ID.includes('your_google_place_id_here')) {
-      console.warn('Place ID contains placeholder text. Please replace with actual values.');
+    if (PLACE_ID && PLACE_ID.includes("your_google_place_id_here")) {
+      console.warn(
+        "Place ID contains placeholder text. Please replace with actual values."
+      );
     }
   }
 
@@ -33,15 +40,23 @@ export class GoogleReviewsService {
       }
 
       // Check for placeholder values
-      if (GOOGLE_PLACES_API_KEY.includes('your_google_places_api_key_here') || 
-          PLACE_ID.includes('your_google_place_id_here')) {
-        throw new Error("Environment variables contain placeholder text. Please update with actual values.");
+      if (
+        GOOGLE_PLACES_API_KEY.includes("your_google_places_api_key_here") ||
+        PLACE_ID.includes("your_google_place_id_here")
+      ) {
+        throw new Error(
+          "Environment variables contain placeholder text. Please update with actual values."
+        );
       }
 
       // Get place details including reviews
-      const response = await fetch(
-        `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&key=${GOOGLE_PLACES_API_KEY}`
-      );
+      // Use local proxy for development, direct API for production
+      const isDevelopment = import.meta.env.DEV;
+      const apiUrl = isDevelopment 
+        ? `/api/google-places/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&key=${GOOGLE_PLACES_API_KEY}`
+        : `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&key=${GOOGLE_PLACES_API_KEY}`;
+      
+      const response = await fetch(apiUrl);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
