@@ -1,30 +1,11 @@
 // Google Reviews Service
 // Note: You'll need to set up Google Cloud Console and get an API key
 
-// Debug environment variable loading
-console.log('=== Environment Variable Loading Debug ===');
-console.log('import.meta.env:', import.meta.env);
-console.log('VITE_GOOGLE_PLACES_API_KEY from env:', import.meta.env.VITE_GOOGLE_PLACES_API_KEY);
-console.log('VITE_GOOGLE_PLACE_ID from env:', import.meta.env.VITE_GOOGLE_PLACE_ID);
-console.log('========================================');
-
 const GOOGLE_PLACES_API_KEY = import.meta.env.VITE_GOOGLE_PLACES_API_KEY;
 const PLACE_ID = import.meta.env.VITE_GOOGLE_PLACE_ID; // Your business's Google Place ID
 
 export class GoogleReviewsService {
   constructor() {
-    console.log('=== Google Reviews Service Debug Info ===');
-    console.log('Environment variables loaded:');
-    console.log('- VITE_GOOGLE_PLACES_API_KEY:', GOOGLE_PLACES_API_KEY);
-    console.log('- VITE_GOOGLE_PLACE_ID:', PLACE_ID);
-    console.log('Length checks:');
-    console.log('- API Key length:', GOOGLE_PLACES_API_KEY ? GOOGLE_PLACES_API_KEY.length : 'undefined');
-    console.log('- Place ID length:', PLACE_ID ? PLACE_ID.length : 'undefined');
-    console.log('Type checks:');
-    console.log('- API Key type:', typeof GOOGLE_PLACES_API_KEY);
-    console.log('- Place ID type:', typeof PLACE_ID);
-    console.log('========================================');
-    
     if (!GOOGLE_PLACES_API_KEY) {
       console.warn(
         "Google Places API key not found. Please set VITE_GOOGLE_PLACES_API_KEY in your .env file"
@@ -56,10 +37,6 @@ export class GoogleReviewsService {
           PLACE_ID.includes('your_google_place_id_here')) {
         throw new Error("Environment variables contain placeholder text. Please update with actual values.");
       }
-
-      console.log('Making API request to Google Places API...');
-      console.log('Place ID:', PLACE_ID);
-      console.log('API Key (first 10 chars):', GOOGLE_PLACES_API_KEY.substring(0, 10) + '...');
 
       // Get place details including reviews
       const response = await fetch(
