@@ -58,31 +58,32 @@
   padding: 0;
   flex-direction: column;
   width: 100%;
-  gap: var(--space-sm);
+  gap: 8px;
 }
 
 .nav-link {
   color: #ffffff;
   text-decoration: none;
-  font-size: var(--font-size-base);
+  font-size: 16px;
   font-weight: 500;
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
   display: block;
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .nav-link:hover {
-  background-color: var(--color-surface);
-  color: var(--color-primary);
+  background-color: rgba(139, 115, 85, 0.2);
+  color: #8B7355;
 }
 
 .nav-link:active {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(139, 115, 85, 0.3);
 }
 
 /* Smooth scrolling enhancement */
@@ -130,7 +131,7 @@ html {
   height: 2px;
   background-color: #ffffff;
   border-radius: 1px;
-  transition: all var(--transition-fast);
+  transition: all 0.3s ease;
 }
 
 /* Simple hamburger animation - just hide middle line and adjust spacing */
@@ -154,40 +155,41 @@ html {
 /* Mobile menu open state */
 .navbar-nav.open {
   display: flex;
-  margin-top: var(--space-sm);
-  padding-top: var(--space-sm);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--color-background);
+  margin-top: 8px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(139, 115, 85, 0.3);
+  background-color: #1a1a1a;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 999;
 }
 
 /* Responsive container - scales up for larger screens */
 @media (min-width: 576px) {
   .navbar-container {
-    padding: var(--space-md) 0;
+    padding: 12px 0;
   }
 }
 
 @media (min-width: 768px) {
   .navbar-container {
-    padding: var(--space-md) 0;
+    padding: 12px 0;
   }
 }
 
 @media (min-width: 992px) {
   .navbar-container {
     max-width: 100%;
-    padding: var(--space-md) 0;
+    padding: 12px 0;
   }
 }
 
 @media (min-width: 1300px) {
   .navbar-container {
-    padding: var(--space-xs)0;
+    padding: 8px 0;
   }
   
   /* Show navigation on large desktop and up */
@@ -195,7 +197,7 @@ html {
     display: flex;
     flex-direction: row;
     width: auto;
-    gap: var(--space-md);
+    gap: 20px;
     position: static;
     background: none;
     box-shadow: none;
@@ -209,7 +211,7 @@ html {
   }
   
   .nav-link {
-    padding: var(--space-md) var(--space-lg);
+    padding: 12px 20px;
     white-space: nowrap;
   }
 } 
