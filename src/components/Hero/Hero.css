@@ -13,6 +13,52 @@
   position: relative;
 }
 
+/* Mobile-specific fixes for background attachment issues */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+  
+  .button-container {
+    height: 68%;
+  }
+  
+  .artist-logo {
+    max-width: 40%;
+  }
+}
+
+/* Additional mobile optimization for very small screens */
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+    background-attachment: scroll;
+    background-position: center center;
+  }
+  
+  .button-container {
+    height: 70%;
+    padding: 20px;
+  }
+  
+  .artist-logo {
+    max-width: 50%;
+  }
+  
+  .booking-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
 .hero-image {
   max-width: 100%;
   max-height: 60vh;
