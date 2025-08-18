@@ -34,6 +34,8 @@ export class GoogleReviewsService {
   }
 
   async getReviews() {
+    // TEMPORARILY DISABLED - Commented out to stop API requests
+    /*
     try {
       if (!GOOGLE_PLACES_API_KEY || !PLACE_ID) {
         throw new Error("Missing API key or Place ID");
@@ -78,6 +80,11 @@ export class GoogleReviewsService {
       // Don't return fallback data - let the component handle it
       throw error;
     }
+    */
+
+    // Return empty data to prevent API calls
+    console.log("Google Reviews API temporarily disabled");
+    throw new Error("API temporarily disabled");
   }
 
   formatReviewDate(relativeTimeDescription) {

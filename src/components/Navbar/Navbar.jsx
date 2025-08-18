@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -12,11 +13,13 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <img
-            src="/images/styled_header_contrast_transparent_bkg.png"
-            alt="Seventh Heaven Tattoo"
-            className="navbar-logo-image"
-          />
+          <Link to="/">
+            <img
+              src="/images/styled_header_contrast_transparent_bkg.png"
+              alt="Seventh Heaven Tattoo"
+              className="navbar-logo-image"
+            />
+          </Link>
         </div>
 
         {/* Hamburger menu button for mobile */}
@@ -93,9 +96,13 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#" className="nav-link">
+            <Link
+              to="/aftercare"
+              className="nav-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Aftercare
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="nav-link">

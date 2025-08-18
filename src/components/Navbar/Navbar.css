@@ -28,6 +28,12 @@
   padding-left: var(--space-md);
 }
 
+.navbar-logo a {
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+
 .navbar-logo-image {
   height: 80px;
   width: auto;
