@@ -185,6 +185,7 @@ html {
     max-width: 100%;
     padding: 12px 0;
   }
+
 }
 
 @media (min-width: 1300px) {
@@ -214,4 +215,5 @@ html {
     padding: 12px 20px;
     white-space: nowrap;
   }
+} 
 } 

@@ -1,12 +1,58 @@
-# React + Vite
+# Seventh Heaven Tattoo Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for Seventh Heaven Tattoo Studio built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design** - Works perfectly on all devices
+- **Google Reviews Integration** - Real-time customer reviews from Google
+- **Modern UI** - Clean, professional design with smooth animations
+- **Fast Performance** - Built with Vite for optimal loading speeds
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- CSS3 with modern features
+- Google Places API integration
+
+## Getting Started
+
+1. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Set up environment variables:**
+   Create a `.env` file with:
+
+   ```bash
+   VITE_GOOGLE_PLACES_API_KEY=your_api_key_here
+   VITE_GOOGLE_PLACE_ID=your_place_id_here
+   ```
+
+3. **Start development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## Project Structure
+
+- `src/components/` - React components
+- `src/services/` - API services (Google Reviews)
+- `src/` - Main application files
+
+## Deployment
+
+The site is configured for GitHub Pages deployment:
+
+```bash
+npm run deploy
+```

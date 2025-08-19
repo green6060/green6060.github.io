@@ -48,11 +48,11 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="#artist-portfolio"
+              href="#about"
               className="nav-link"
               onClick={(e) => {
                 e.preventDefault();
-                const element = document.getElementById("artist-portfolio");
+                const element = document.getElementById("about");
                 if (element) {
                   const navbarHeight =
                     document.querySelector(".navbar").offsetHeight;
@@ -65,7 +65,7 @@ function Navbar() {
                 setIsMenuOpen(false);
               }}
             >
-              Artist Portfolio
+              About
             </a>
           </li>
           <li>
@@ -91,7 +91,24 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#" className="nav-link">
+            <a
+              href="#events"
+              className="nav-link"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById("events");
+                if (element) {
+                  const navbarHeight =
+                    document.querySelector(".navbar").offsetHeight;
+                  const elementPosition = element.offsetTop - navbarHeight - 20;
+                  window.scrollTo({
+                    top: elementPosition,
+                    behavior: "smooth",
+                  });
+                }
+                setIsMenuOpen(false);
+              }}
+            >
               Events
             </a>
           </li>
@@ -103,11 +120,6 @@ function Navbar() {
             >
               Aftercare
             </Link>
-          </li>
-          <li>
-            <a href="#" className="nav-link">
-              Directions
-            </a>
           </li>
         </ul>
       </div>

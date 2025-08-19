@@ -102,29 +102,22 @@
 
 .reviewer-info {
   display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.reviewer-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #8B7355;
-  object-fit: cover;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .reviewer-info h4 {
   color: #ffffff;
-  margin: 0 0 5px 0;
-  font-size: 1.1rem;
+  margin: 0;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .stars {
   color: #FFD700;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
 
 .review-date {
@@ -300,15 +293,10 @@
   .review-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
   }
 
   .reviewer-info {
-    gap: 10px;
-  }
-
-  .reviewer-avatar {
-    width: 40px;
-    height: 40px;
+    gap: 8px;
   }
 } 
