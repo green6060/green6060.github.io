@@ -20,9 +20,16 @@ export class GoogleReviewsService {
 
       // Get place details including reviews
       const isDevelopment = import.meta.env.DEV;
-      const apiUrl = isDevelopment
-        ? `/api/google-places/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`
-        : `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
+      let apiUrl;
+      
+      if (isDevelopment) {
+        // Use Vite proxy in development
+        apiUrl = `/api/google-places/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
+      } else {
+        // Use CORS proxy in production to work around CORS issues
+        const googleApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
+        apiUrl = `https://cors-anywhere.herokuapp.com/${googleApiUrl}`;
+      }
 
       const response = await fetch(apiUrl, { signal });
 
