@@ -10,154 +10,154 @@ function Aftercare() {
             ← Back to Home
           </Link>
         </div>
+
         <div className="aftercare-header">
           <h1>Tattoo Aftercare Instructions</h1>
         </div>
 
         <div className="aftercare-content">
-          <div className="aftercare-card">
-            <h2>Immediate Care (First 24-48 Hours)</h2>
-            <div className="care-step">
-              <h3>1. Keep the Bandage On</h3>
+          {/* Duration Section */}
+          <div className="aftercare-duration">
+            <div className="duration-icon">⏰</div>
+            <div className="duration-text">
+              <h2>Duration of Care</h2>
               <p>
-                Your tattoo artist will cover your new tattoo with a bandage or
-                plastic wrap. Keep this covering on for the time specified by
-                your artist (usually 2-4 hours).
-              </p>
-            </div>
-
-            <div className="care-step">
-              <h3>2. First Wash</h3>
-              <p>
-                After removing the bandage, gently wash your tattoo with
-                lukewarm water and mild, fragrance-free soap. Use your clean
-                hands, not a washcloth or sponge.
-              </p>
-            </div>
-
-            <div className="care-step">
-              <h3>3. Pat Dry</h3>
-              <p>
-                Gently pat your tattoo dry with a clean, soft towel. Do not rub
-                or scrub the area.
+                You will want around <strong>7 days total</strong> of constant
+                aftercare
               </p>
             </div>
           </div>
 
-          <div className="aftercare-card">
-            <h2>Healing Process (Days 2-14)</h2>
-            <div className="care-step">
-              <h3>4. Moisturize Regularly</h3>
-              <p>
-                Apply a thin layer of fragrance-free, alcohol-free moisturizer
-                or healing ointment as recommended by your artist. Avoid
-                petroleum-based products.
+          {/* Second Skin Section */}
+          <div className="aftercare-card second-skin-card">
+            <div className="card-header">
+              <div className="card-icon">🩹</div>
+              <h2>Second Skin Instructions</h2>
+            </div>
+            <div className="card-content">
+              <p className="card-intro">
+                If you get Second Skin, keep it on for{" "}
+                <strong>no longer than 5 days</strong>. Take it off early for
+                one of these 4 reasons:
               </p>
-            </div>
-
-            <div className="care-step">
-              <h3>5. Keep It Clean</h3>
-              <p>
-                Wash your tattoo 2-3 times daily with mild soap and water.
-                Always wash your hands first.
-              </p>
-            </div>
-
-            <div className="care-step">
-              <h3>6. Avoid Sun Exposure</h3>
-              <p>
-                Keep your tattoo out of direct sunlight. Once healed, always
-                apply sunscreen (SPF 30+) to protect your tattoo from fading.
-              </p>
-            </div>
-          </div>
-
-          <div className="aftercare-card">
-            <h2>What to Avoid</h2>
-            <div className="care-step">
-              <h3>❌ Don't Do These Things</h3>
-              <ul>
-                <li>Scratch or pick at scabs</li>
-                <li>Submerge in water (pools, hot tubs, baths)</li>
-                <li>Wear tight clothing that may rub the tattoo</li>
-                <li>
-                  Apply makeup, lotions, or creams not recommended by your
-                  artist
-                </li>
-                <li>Expose to direct sunlight or tanning beds</li>
-                <li>Engage in activities that may cause excessive sweating</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="aftercare-card">
-            <h2>Healing Timeline</h2>
-            <div className="timeline">
-              <div className="timeline-item">
-                <div className="timeline-day">Days 1-3</div>
-                <div className="timeline-desc">
-                  Tattoo may be red, swollen, and tender
+              <div className="reasons-grid">
+                <div className="reason-item">
+                  <div className="reason-number">1</div>
+                  <p>You are unable to stop picking at it</p>
                 </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-day">Days 4-7</div>
-                <div className="timeline-desc">
-                  Scabbing begins, avoid picking
+                <div className="reason-item">
+                  <div className="reason-number">2</div>
+                  <p>
+                    You are leaking out of it. If stuff can get out, stuff can
+                    get in
+                  </p>
                 </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-day">Days 8-14</div>
-                <div className="timeline-desc">
-                  Scabs fall off, tattoo may appear dull
+                <div className="reason-item">
+                  <div className="reason-number">3</div>
+                  <p>
+                    You experience a red reaction to the edges of the Second
+                    Skin
+                  </p>
                 </div>
-              </div>
-              <div className="timeline-item">
-                <div className="timeline-day">Days 15-30</div>
-                <div className="timeline-desc">
-                  Tattoo regains vibrancy, healing continues
+                <div className="reason-item">
+                  <div className="reason-number">4</div>
+                  <p>
+                    You are sweating under it, such as when you work outdoors,
+                    go to the gym, doing heavy labor, etc.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="aftercare-card">
-            <h2>When to Contact Your Artist</h2>
-            <div className="warning-section">
-              <p>Contact your tattoo artist immediately if you experience:</p>
-              <ul>
-                <li>Excessive redness, swelling, or pain</li>
-                <li>Pus or unusual discharge</li>
-                <li>Fever or chills</li>
-                <li>Severe itching or rash</li>
-                <li>Any other concerning symptoms</li>
-              </ul>
-              <p className="contact-info">
-                <strong>Contact:</strong> DM us on Instagram for immediate
-                assistance
-              </p>
+          {/* 7 Steps Section */}
+          <div className="aftercare-card steps-card">
+            <div className="card-header">
+              <div className="card-icon">📋</div>
+              <h2>7 Steps of Care</h2>
+            </div>
+            <div className="steps-container">
+              <div className="step-item">
+                <div className="step-number">1</div>
+                <div className="step-content">
+                  <h3>Initial Cleaning</h3>
+                  <p>
+                    After the initial bandage is removed, gently wash the tattoo
+                    with lukewarm water and a mild antibacterial soap. Pat it
+                    dry with a clean paper towel.
+                  </p>
+                </div>
+              </div>
+
+              <div className="step-item">
+                <div className="step-number">2</div>
+                <div className="step-content">
+                  <h3>Applying Lotion</h3>
+                  <p>
+                    Apply a thin layer of fragrance-free lotion (like Lubriderm
+                    or Cetaphil). Avoid over-applying, as it can suffocate the
+                    skin and slow healing.
+                  </p>
+                </div>
+              </div>
+
+              <div className="step-item">
+                <div className="step-number">3</div>
+                <div className="step-content">
+                  <h3>Frequency</h3>
+                  <p>Clean and moisturize the tattoo around 2 times a day.</p>
+                </div>
+              </div>
+
+              <div className="step-item">
+                <div className="step-number">4</div>
+                <div className="step-content">
+                  <h3>Avoid</h3>
+                  <p>
+                    Do not pick or scratch at the tattoo, as this can cause
+                    scarring and ink loss. Avoid soaking the tattoo in water
+                    (baths, pools, hot tubs) for the first few weeks.
+                  </p>
+                </div>
+              </div>
+
+              <div className="step-item">
+                <div className="step-number">5</div>
+                <div className="step-content">
+                  <h3>Healing Timeline</h3>
+                  <p>
+                    Expect the tattoo to peel and flake like a sunburn within a
+                    few days. This is normal and the scabs will fall off on
+                    their own. Make sure to keep it hydrated with a non-scented
+                    lotion.
+                  </p>
+                </div>
+              </div>
+
+              <div className="step-item">
+                <div className="step-number">6</div>
+                <div className="step-content">
+                  <h3>Monitor for Infection</h3>
+                  <p>
+                    If you experience excessive redness, swelling, pain, or pus,
+                    consult your tattoo artist or a doctor, as it could be a
+                    sign of infection.
+                  </p>
+                </div>
+              </div>
+
+              <div className="step-item">
+                <div className="step-number">7</div>
+                <div className="step-content">
+                  <h3>Sun Protection</h3>
+                  <p>
+                    Once healed, protect your tattoo from the sun with clothing
+                    or sunscreen to prevent fading.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="aftercare-card">
-            <h2>Long-term Care</h2>
-            <div className="care-step">
-              <h3>Maintaining Your Tattoo</h3>
-              <p>
-                Even after your tattoo is fully healed, proper care will help
-                maintain its vibrancy and detail for years to come. Always use
-                sunscreen when outdoors, keep your skin moisturized, and avoid
-                excessive sun exposure.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="aftercare-footer">
-          <p>
-            <strong>Remember:</strong> Every tattoo heals differently, and
-            individual healing times may vary. When in doubt, always consult
-            with your tattoo artist for personalized advice.
-          </p>
         </div>
       </div>
     </section>
