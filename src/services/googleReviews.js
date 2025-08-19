@@ -21,7 +21,7 @@ export class GoogleReviewsService {
       // Get place details including reviews
       const isDevelopment = import.meta.env.DEV;
       let apiUrl;
-      
+
       if (isDevelopment) {
         // Use Vite proxy in development
         apiUrl = `/api/google-places/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
@@ -29,16 +29,27 @@ export class GoogleReviewsService {
         // Use a more reliable CORS proxy in production
         const googleApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
         // Try multiple CORS proxy services as fallbacks
-        apiUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(googleApiUrl)}`;
+        apiUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(
+          googleApiUrl
+        )}`;
       }
 
-      const response = await fetch(apiUrl, { signal });
+      console.log("Making API request to:", apiUrl);
+      console.log("Environment:", isDevelopment ? "Development" : "Production");
+
+      // Only pass signal if it's provided and not aborted
+      const fetchOptions = signal && !signal.aborted ? { signal } : {};
+      const response = await fetch(apiUrl, fetchOptions);
+
+      console.log("Response status:", response.status);
+      console.log("Response headers:", Object.fromEntries(response.headers.entries()));
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
+      console.log("API response data:", data);
 
       if (data.status !== "OK") {
         throw new Error(`Google API error: ${data.status}`);
@@ -50,37 +61,55 @@ export class GoogleReviewsService {
         totalRatings: data.result.user_ratings_total || 0,
       };
     } catch (error) {
-      console.error("Error fetching Google reviews:", error);
+      // Don't log AbortError as it's expected behavior
+      if (error.name === "AbortError") {
+        throw error;
+      }
       
+      console.error("Error fetching Google reviews:", error);
+      console.error("Error details:", {
+        name: error.name,
+        message: error.message,
+        stack: error.stack
+      });
+
       // If we're in production and the first proxy failed, try a fallback
-      if (!import.meta.env.DEV && error.message.includes('HTTP error')) {
+      if (!import.meta.env.DEV && error.message.includes("HTTP error")) {
         try {
           console.log("Trying fallback CORS proxy...");
           const googleApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
-          const fallbackUrl = `https://corsproxy.io/?${encodeURIComponent(googleApiUrl)}`;
-          
-          const fallbackResponse = await fetch(fallbackUrl, { signal });
-          
+          const fallbackUrl = `https://corsproxy.io/?${encodeURIComponent(
+            googleApiUrl
+          )}`;
+
+          const fallbackOptions = signal && !signal.aborted ? { signal } : {};
+          const fallbackResponse = await fetch(fallbackUrl, fallbackOptions);
+
           if (!fallbackResponse.ok) {
-            throw new Error(`Fallback proxy failed: ${fallbackResponse.status}`);
+            throw new Error(
+              `Fallback proxy failed: ${fallbackResponse.status}`
+            );
           }
-          
+
           const fallbackData = await fallbackResponse.json();
-          
+
           if (fallbackData.status !== "OK") {
             throw new Error(`Google API error: ${fallbackData.status}`);
           }
-          
+
           return {
             reviews: fallbackData.result.reviews || [],
             rating: fallbackData.result.rating || 0,
             totalRatings: fallbackData.result.user_ratings_total || 0,
           };
         } catch (fallbackError) {
+          if (fallbackError.name === "AbortError") {
+            throw fallbackError;
+          }
           console.error("Fallback proxy also failed:", fallbackError);
         }
       }
-      
+
       throw error;
     }
   }
