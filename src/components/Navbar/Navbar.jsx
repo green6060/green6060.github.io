@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -48,11 +48,11 @@ function Navbar() {
           </li>
           <li>
             <a
-              href="#about"
+              href="#artist-portfolio"
               className="nav-link"
               onClick={(e) => {
                 e.preventDefault();
-                const element = document.getElementById("about");
+                const element = document.getElementById("artist-portfolio");
                 if (element) {
                   const navbarHeight =
                     document.querySelector(".navbar").offsetHeight;
@@ -65,7 +65,7 @@ function Navbar() {
                 setIsMenuOpen(false);
               }}
             >
-              About
+              Artist Portfolio
             </a>
           </li>
           <li>
