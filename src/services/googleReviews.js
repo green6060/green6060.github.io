@@ -26,9 +26,10 @@ export class GoogleReviewsService {
         // Use Vite proxy in development
         apiUrl = `/api/google-places/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
       } else {
-        // Use CORS proxy in production to work around CORS issues
+        // Use a more reliable CORS proxy in production
         const googleApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
-        apiUrl = `https://cors-anywhere.herokuapp.com/${googleApiUrl}`;
+        // Try multiple CORS proxy services as fallbacks
+        apiUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(googleApiUrl)}`;
       }
 
       const response = await fetch(apiUrl, { signal });
@@ -50,6 +51,36 @@ export class GoogleReviewsService {
       };
     } catch (error) {
       console.error("Error fetching Google reviews:", error);
+      
+      // If we're in production and the first proxy failed, try a fallback
+      if (!import.meta.env.DEV && error.message.includes('HTTP error')) {
+        try {
+          console.log("Trying fallback CORS proxy...");
+          const googleApiUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&maxheight=400&key=${GOOGLE_PLACES_API_KEY}`;
+          const fallbackUrl = `https://corsproxy.io/?${encodeURIComponent(googleApiUrl)}`;
+          
+          const fallbackResponse = await fetch(fallbackUrl, { signal });
+          
+          if (!fallbackResponse.ok) {
+            throw new Error(`Fallback proxy failed: ${fallbackResponse.status}`);
+          }
+          
+          const fallbackData = await fallbackResponse.json();
+          
+          if (fallbackData.status !== "OK") {
+            throw new Error(`Google API error: ${fallbackData.status}`);
+          }
+          
+          return {
+            reviews: fallbackData.result.reviews || [],
+            rating: fallbackData.result.rating || 0,
+            totalRatings: fallbackData.result.user_ratings_total || 0,
+          };
+        } catch (fallbackError) {
+          console.error("Fallback proxy also failed:", fallbackError);
+        }
+      }
+      
       throw error;
     }
   }
