@@ -34,22 +34,15 @@ export class GoogleReviewsService {
         )}`;
       }
 
-      console.log("Making API request to:", apiUrl);
-      console.log("Environment:", isDevelopment ? "Development" : "Production");
-
       // Only pass signal if it's provided and not aborted
       const fetchOptions = signal && !signal.aborted ? { signal } : {};
       const response = await fetch(apiUrl, fetchOptions);
-
-      console.log("Response status:", response.status);
-      console.log("Response headers:", Object.fromEntries(response.headers.entries()));
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
-      console.log("API response data:", data);
 
       if (data.status !== "OK") {
         throw new Error(`Google API error: ${data.status}`);
@@ -67,11 +60,6 @@ export class GoogleReviewsService {
       }
       
       console.error("Error fetching Google reviews:", error);
-      console.error("Error details:", {
-        name: error.name,
-        message: error.message,
-        stack: error.stack
-      });
 
       // If we're in production and the first proxy failed, try a fallback
       if (!import.meta.env.DEV && error.message.includes("HTTP error")) {
